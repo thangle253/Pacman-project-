@@ -1,7 +1,7 @@
 # Pacman-project
 # 🟡 Pacman-AI - Tìm Đường Cho Pacman Bằng AI
 
-![Level 1](ImageREADME/Home.jpg)
+![Home](ImageREADME/Home.jpg)
 
 ## 📌 Sơ lược Project
 
@@ -44,11 +44,12 @@
   - Vị trí quái vật (`M`)
   - Vị trí các thức ăn (`F`)
   - Bản đồ tường (`#`)
+![Ini](ImageREADME/Initial.jpg)
 
 - **Trạng thái đích:**
   - Pacman ăn hết thức ăn **hoặc**
   - Bị quái vật bắt (trò chơi kết thúc)
-
+![End](ImageREADME/End.jpg)
 ---
 
 ## 🧠 Giải thích thuật toán và hàm chi tiết
