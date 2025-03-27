@@ -44,12 +44,12 @@
   - Vị trí quái vật (`M`)
   - Vị trí các thức ăn (`F`)
   - Bản đồ tường (`#`)
-![Ini](ImageREADME/Initial.jpg)
+![Ini](ImageREADME/Initial.png)
 
 - **Trạng thái đích:**
   - Pacman ăn hết thức ăn **hoặc**
   - Bị quái vật bắt (trò chơi kết thúc)
-![End](ImageREADME/End.jpg)
+![End](ImageREADME/End.png)
 ---
 
 ## 🧠 Giải thích thuật toán và hàm chi tiết
