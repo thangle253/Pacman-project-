@@ -1,5 +1,7 @@
-# Pacman-project-
+# Pacman-project
 # 🟡 Pacman-AI - Tìm Đường Cho Pacman Bằng AI
+
+![Level 1](ImageREADME/Home.jpg)
 
 ## 📌 Sơ lược Project
 
@@ -15,7 +17,7 @@
 - **Level 1:** Breadth-First Search (BFS)
 - **Level 2:** BFS có kiểm tra tránh quái vật
 - **Level 3:** Heuristic Local Search
-- **Level 4:** Minimax (cho Pacman) và A* (cho quái vật)
+- **Level 4:** GREEDY, MINIMAX, BFS, UCS, A*, IDA* (cho Pacman) và A* (cho quái vật)
 
 ## 💰 Hàm tính chi phí
 
@@ -46,3 +48,33 @@
 - **Trạng thái đích:**
   - Pacman ăn hết thức ăn **hoặc**
   - Bị quái vật bắt (trò chơi kết thúc)
+
+---
+
+## 🧠 Giải thích thuật toán và hàm chi tiết
+
+### 🔹 1. Thuật toán BFS (`run_BFS(start, goal)`)
+
+- **BFS** duyệt theo chiều rộng, dùng hàng đợi để lưu các vị trí chờ xử lý.
+- Khi tìm thấy đích (thức ăn), truy vết ngược lại đường đi.
+
+### 🔹 2. A* (`A_star(start, goal)`)
+
+- A* kết hợp giữa chi phí đi thực tế (`g(n)`) và ước lượng còn lại (`h(n)`) để định hướng tìm kiếm.
+- Sắp xếp độ ưu tiên dựa trên `f(n) = g(n) + h(n)`.
+
+### 🔹 3. Minimax (`Minimax(state, depth)`)
+
+- Dùng cho trò chơi đối kháng, Pacman (Max) cố gắng tối đa hóa điểm, quái vật (Min) cố gắng bắt hoặc làm giảm điểm.
+- Xây dựng cây trò chơi, duyệt từ dưới lên để tìm nước đi tối ưu.
+
+### 🔹 4. GREEDY, UCS, IDA*
+
+- **Greedy:** Chỉ dựa trên heuristic `h(n)`, nhanh nhưng không đảm bảo tối ưu.
+- **UCS:** Dựa trên chi phí thực `g(n)` (giống BFS nhưng tính chi phí).
+- **IDA***: Duyệt sâu rộng rãi, kết hợp DFS và A* với giới hạn chi phí tăng dần.
+
+### ⚖️ Các hàm hỗ trợ khác
+
+- `get_neighbors(pos)`: Trả về danh sách vị trí có thể đi từ `pos`
+- `evaluate(state)`: Đánh giá trạng thái dựa trên thức ăn và quái vật (cho Minimax)
